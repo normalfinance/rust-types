@@ -21,3 +21,22 @@ pub enum ComponentAction {
     Remove,
     UpdateWeight,
 }
+
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub enum Role {
+    Admin,
+    EmergencyAdmin,
+    RewardsAdmin,
+    OperationsAdmin,
+    PauseAdmin,
+    EmergencyPauseAdmin,
+}
+
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub enum Operation {
+    Mint,
+    Redeem,
+    Rebalance,
+}
