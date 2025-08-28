@@ -25,4 +25,10 @@ pub enum InsuranceFundError {
     FundDepositKilled = 30,
     FundRequestWithdrawKilled = 31,
     FundWithdrawKilled = 32,
+    PayInsuranceClaimFailed = 33,
+    UnsupportedToken = 34,
+    QueryPoolFailed = 35,
+    InvalidTimestamp = 36,
+    CostBasisUnderflow = 37,
+    InvalidOracle = 38,
 }

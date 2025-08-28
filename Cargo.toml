@@ -1,6 +1,6 @@
 [package]
 name = "normal-rust-types"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 description="A common Rust types library for the entire Normal Finance Ecosystem"
 license = "Apache-2.0"
@@ -8,6 +8,7 @@ authors = ["Jay Malve <jaymalveus@gmail.com>", "Joshua Blew <joshua@normalfinanc
 
 [dependencies]
 soroban-sdk = "22.0.1"
+soroban-fixed-point-math = "1.3.0"
 
 
 [lib]

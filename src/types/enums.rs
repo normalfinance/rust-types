@@ -78,6 +78,7 @@ pub enum NormalAction {
     ClaimInsurance,
 }
 
+#[contracttype]
 #[derive(Clone, Copy, PartialEq, Debug, Eq, Default)]
 pub enum OracleValidity {
     NonPositive,
