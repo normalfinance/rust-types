@@ -69,6 +69,7 @@ pub enum PoolTier {
 #[contracttype]
 #[derive(Clone, Copy, PartialEq, Debug, Eq)]
 pub enum NormalAction {
+    PoolInit,
     AddLiquidity,
     RemoveLiquidity,
     Swap,
@@ -82,6 +83,7 @@ pub enum OracleValidity {
     NonPositive,
     TooVolatile,
     StaleForPool,
+    Frozen,
     #[default]
     Valid,
 }

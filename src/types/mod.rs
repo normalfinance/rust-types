@@ -10,6 +10,9 @@ pub mod pool;
 pub mod oracle;
 pub mod amm_config;
 
+pub mod insurance_fund;
+pub mod rewards;
+
 // Re-export all types for easy access
 pub use enums::*;
 pub use index::*;
@@ -22,3 +25,7 @@ pub use config::*;
 pub use pool::*;
 pub use oracle::*;
 pub use amm_config::*;
+
+// Additional AMM type exports from PR #91
+pub use insurance_fund::*;
+pub use rewards::*;

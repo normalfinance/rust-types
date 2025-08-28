@@ -1,4 +1,4 @@
-use soroban_sdk::{contracttype, Address, Symbol};
+use soroban_sdk::{contracttype, Address, Symbol, Vec};
 use super::enums::{PoolTier, PoolStatus};
 
 #[contracttype]
@@ -64,10 +64,21 @@ pub struct Reserve {
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct Stake {
+    pub user: Address,
+    pub token: Address,
+    pub shares: u128,
+    pub base: u128,
     pub if_shares: u128,
     pub last_withdraw_request_shares: u128,
     pub if_base: u128,
     pub last_withdraw_request_value: u128,
     pub last_withdraw_request_ts: u64,
     pub cost_basis: u128,
+}
+
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct PoolPlaneType {
+    pub init_args: Vec<u128>,
+    pub reserves: Vec<u128>,
 }
