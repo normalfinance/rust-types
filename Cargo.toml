@@ -9,6 +9,5 @@ authors = ["Jay Malve <jaymalveus@gmail.com>", "Joshua Blew <joshua@normalfinanc
 [dependencies]
 soroban-sdk = "22.0.1"
 
-
 [lib]
 path = "src/lib.rs"

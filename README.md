@@ -1,14 +1,14 @@
-# Normal Finance Rust Types
+# Normal Rust Types
 
 [![Crates.io](https://img.shields.io/crates/v/normal-rust-types.svg)](https://crates.io/crates/normal-rust-types)
 [![Documentation](https://docs.rs/normal-rust-types/badge.svg)](https://docs.rs/normal-rust-types)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE.md)
 
-A comprehensive Rust types library for the Normal Finance ecosystem, providing shared data structures, events, storage types, and error definitions for Soroban smart contracts.
+A comprehensive Rust types library for the Normal ecosystem, providing shared data structures, events, storage types, and error definitions for Soroban smart contracts.
 
 ## Overview
 
-Normal Finance is a decentralized finance platform built on Stellar's Soroban smart contract platform. This crate provides the foundational types used across all Normal Finance smart contracts, including:
+Normal is a decentralized finance platform built on Stellar's Soroban smart contract platform. This crate provides the foundational types used across all Normal smart contracts, including:
 
 - **Index Fund Management**: Types for creating and managing tokenized index funds
 - **Automated Market Maker (AMM)**: Pool management, liquidity provision, and trading types
@@ -139,7 +139,7 @@ match contract_result {
 
 ### Types (`types/`)
 
-Core data structures used across Normal Finance contracts:
+Core data structures used across Normal contracts:
 
 - **`amm_config`**: AMM configuration and settings
 - **`config`**: General configuration types
@@ -201,7 +201,7 @@ Optimized storage structures for Soroban contracts:
 
 ## Contributing
 
-We welcome contributions to improve and extend the Normal Finance type system. Please ensure that:
+We welcome contributions to improve and extend the Normal type system. Please ensure that:
 
 1. All new types include proper documentation
 2. Error types include descriptive messages
@@ -219,6 +219,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LIC
 
 ## Links
 
-- [Normal Finance](https://normalfinance.io)
+- [Normal](https://normalfinance.io)
 - [Soroban Documentation](https://soroban.stellar.org/)
 - [Stellar Network](https://stellar.org/)
