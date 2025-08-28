@@ -1,6 +1,6 @@
-use soroban_sdk::{contracttype, Address, Vec};
 use super::enums::ComponentAction;
 use super::index::Component;
+use soroban_sdk::{contracttype, Address, Vec};
 
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]

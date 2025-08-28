@@ -1,7 +1,9 @@
 pub mod errors;
-pub mod types;
+pub mod events;
 pub mod storage;
+pub mod types;
 
 pub use errors::*;
-pub use types::*;
+pub use events::*;
 pub use storage::*;
+pub use types::*;

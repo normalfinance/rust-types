@@ -4,57 +4,50 @@ use soroban_sdk::{contracttype, Address};
 #[contracttype]
 pub enum IndexDataKey {
     Factory,
-    SwapUtility, 
+    SwapUtility,
     TokenIndex,
 
-    BaseNAV, 
-    InitialPrice, 
+    BaseNAV,
+    InitialPrice,
 
-    Component(Address), 
+    Component(Address),
     ComponentBalance(Address),
 
-    Public, 
+    Public,
 
-    ManagerFeeFraction, 
+    ManagerFeeFraction,
 
-    
     ManagerFeeAmount,
     ProtocolFeeAmount,
     MinimumSharesForFeeCollection,
 
-    
     ManagerAddress,
     ProtocolFeeRecipient,
     AccumulatedManagerFees,
     AccumulatedProtocolFees,
     LastFeeCollection,
 
-    Whitelist(Address), 
-    Blacklist(Address), 
+    Whitelist(Address),
+    Blacklist(Address),
 
     RebalanceThreshold,
 
     LastRebalanceTs,
     LastUpdatedTs,
 
-    
     TotalMints,
     TotalRedemptions,
     TotalFees,
 
-    
     IsKilledMint,
     IsKilledRedeem,
     IsKilledRebalance,
 
-    
-    ComponentRegistry, 
+    ComponentRegistry,
 
-    
     RebalanceAuthority(Address),
     RebalanceAuthorityRegistry,
 
-    
     SwapUtilityAddress,
 }
 

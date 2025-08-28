@@ -1,4 +1,4 @@
-use soroban_sdk::{contracttype, Address, Vec, BytesN};
+use soroban_sdk::{contracttype, Address, BytesN, Symbol, Vec};
 
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
@@ -20,4 +20,12 @@ pub struct PrivilegedAddresses {
     pub operations_admin: Address,
     pub pause_admin: Address,
     pub emergency_pause_admins: Vec<Address>,
+}
+
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct WhitelistToken {
+    pub address: Address,
+    pub symbol: Symbol,
+    pub active: bool,
 }
