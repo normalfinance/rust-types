@@ -1,5 +1,5 @@
+use super::enums::{PoolStatus, PoolTier};
 use soroban_sdk::{contracttype, Address, Symbol, Vec};
-use super::enums::{PoolTier, PoolStatus};
 
 #[contracttype]
 #[derive(Default, Clone, Eq, PartialEq, Debug)]

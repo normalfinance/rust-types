@@ -1,5 +1,5 @@
-use soroban_sdk::{contracttype, Address, Symbol};
 use crate::types::enums::Operation;
+use soroban_sdk::{contracttype, Address, Symbol};
 
 // AMM Kill Switch Events (same pattern as index kill switch events)
 #[contracttype]

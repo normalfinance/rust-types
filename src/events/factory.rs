@@ -1,4 +1,4 @@
-use soroban_sdk::{contracttype, Address, Vec, BytesN};
+use soroban_sdk::{contracttype, Address, BytesN, Vec};
 
 // Index Deployment Events
 #[contracttype]

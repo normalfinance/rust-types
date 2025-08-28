@@ -1,6 +1,5 @@
-use soroban_sdk::{contracttype, Address, Vec};
 use crate::types::enums::Role;
-
+use soroban_sdk::{contracttype, Address, Vec};
 
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
@@ -21,7 +20,6 @@ pub struct ApplyTransferOwnershipEventData {
 pub struct RevertTransferOwnershipEventData {
     pub role: Role,
 }
-
 
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]

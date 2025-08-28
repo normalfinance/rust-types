@@ -1,5 +1,5 @@
+use super::enums::{OracleSource, OracleValidity};
 use soroban_sdk::{contracttype, Address};
-use super::enums::{OracleValidity, OracleSource};
 
 #[contracttype]
 #[derive(Default, Clone, Copy, Debug)]

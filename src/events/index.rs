@@ -1,5 +1,5 @@
-use soroban_sdk::{contracttype, Address, Map};
 use crate::types::{Component, ComponentAction};
+use soroban_sdk::{contracttype, Address, Map};
 
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]

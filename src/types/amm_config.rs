@@ -1,6 +1,6 @@
-use soroban_sdk::{contracttype, Address, Symbol, String, BytesN, Vec};
 use super::enums::PoolTier;
 use crate::types::config::PrivilegedAddresses;
+use soroban_sdk::{contracttype, Address, BytesN, String, Symbol, Vec};
 
 #[contracttype]
 #[derive(Clone)]

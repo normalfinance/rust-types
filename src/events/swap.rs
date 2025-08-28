@@ -1,6 +1,5 @@
-use soroban_sdk::{contracttype, Address};
 use crate::types::enums::DexProvider;
-
+use soroban_sdk::{contracttype, Address};
 
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
