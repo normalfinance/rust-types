@@ -1,6 +1,6 @@
 [package]
 name = "normal-rust-types"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description="A common Rust types library for the entire Normal Finance Ecosystem"
 license = "Apache-2.0"
