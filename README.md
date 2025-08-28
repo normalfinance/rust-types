@@ -158,7 +158,6 @@ Core data structures used across Normal Finance contracts:
 Comprehensive error definitions for all contract operations:
 
 - **`access_control_error`**: Permission and role errors
-- **`buffer_error`**: Buffer management errors
 - **`index_error`**: Index fund operation errors
 - **`insurance_fund_error`**: Insurance claim and management errors
 - **`liquidity_calculator_error`**: Liquidity calculation errors
@@ -192,7 +191,6 @@ Optimized storage structures for Soroban contracts:
 
 - **`access_control`**: Role and permission storage
 - **`amm_pool`**: Pool state storage
-- **`buffer`**: Buffer management storage
 - **`factory`**: Factory contract storage
 - **`index`**: Index fund storage
 - **`insurance_fund`**: Insurance fund storage

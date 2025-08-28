@@ -8,7 +8,6 @@ pub mod upgrade;
 
 // AMM-specific storage modules
 pub mod amm_pool;
-pub mod buffer;
 pub mod insurance_fund;
 
 pub use access_control::*;
@@ -21,5 +20,4 @@ pub use upgrade::*;
 
 // AMM-specific storage exports
 pub use amm_pool::*;
-pub use buffer::*;
 pub use insurance_fund::*;
