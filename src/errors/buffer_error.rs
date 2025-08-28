@@ -1,0 +1,14 @@
+use soroban_sdk::contracterror;
+
+#[contracterror]
+#[derive(Copy, Clone)]
+#[repr(u32)]
+pub enum BufferError {
+    ReserveMaxBalanceThreshold = 2,
+    PayoutTooSoon = 3,
+    InsufficentFunds = 4,
+    WithdrawalOverMinimumReserve = 5,
+    AlreadyInitialized = 15,
+    BufferDepositKilled = 6,
+    BufferRequestPayoutKilled = 7,
+}
