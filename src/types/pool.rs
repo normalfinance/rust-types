@@ -82,3 +82,12 @@ pub struct PoolPlaneType {
     pub init_args: Vec<u128>,
     pub reserves: Vec<u128>,
 }
+
+
+impl PoolTier {
+    /// Returns true if this tier is as safe as the other tier (A is safest)
+    pub fn is_as_safe_as(&self, other: &PoolTier) -> bool {
+        // Pool Tier A safest
+        self <= other
+    }
+}

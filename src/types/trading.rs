@@ -4,7 +4,7 @@ use soroban_sdk::{contracttype, Address, String, Symbol, Vec};
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct SwapParams {
-    pub provider: Option<DexProvider>,
+    pub provider: DexProvider,
     pub token_in: Address,
     pub token_out: Address,
     pub amount_in: u128,

@@ -27,6 +27,7 @@ pub struct InitializeParams {
     pub synthetic_token_info: TokenInitInfo,
     pub lp_token_info: TokenInitInfo,
     pub token_b: Address,
+    pub synthetic_sac_address: Address,
     pub fee_fraction: u32,
     pub tier: PoolTier,
     pub quote_max_insurance: u128,

@@ -1,6 +1,6 @@
 [package]
 name = "normal-rust-types"
-version = "0.1.1"
+version = "0.1.5"
 edition = "2021"
 description="A common Rust types library for the entire Normal ecosystem"
 license = "Apache-2.0"
@@ -11,7 +11,8 @@ keywords = ["stellar", "soroban", "crypto", "normal"]
 categories = ["data-structures", "development-tools"]
 
 [dependencies]
-soroban-sdk = "22.0.1"
+soroban-sdk = { version = "22.0.6" }
+soroban-fixed-point-math = { version = "1.3.0" }
 
 [lib]
 path = "src/lib.rs"
