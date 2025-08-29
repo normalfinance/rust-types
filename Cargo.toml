@@ -2,9 +2,13 @@
 name = "normal-rust-types"
 version = "0.1.5"
 edition = "2021"
-description="A common Rust types library for the entire Normal Finance Ecosystem"
+description="A common Rust types library for the entire Normal ecosystem"
 license = "Apache-2.0"
 authors = ["Jay Malve <jaymalveus@gmail.com>", "Joshua Blew <joshua@normalfinance.io>"]
+repository = "https://github.com/normalfinance/rust-types"
+documentation = "https://normalfinance.gitbook.io/docs"
+keywords = ["stellar", "soroban", "crypto", "normal"]
+categories = ["data-structures", "development-tools"]
 
 [dependencies]
 soroban-sdk = { version = "22.0.6" }

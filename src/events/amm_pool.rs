@@ -40,15 +40,6 @@ pub struct RebalanceEventData {
     pub delta_a: i128,
 }
 
-// Buffer Events
-#[contracttype]
-#[derive(Clone, Debug, Eq, PartialEq)]
-pub struct BufferDepositEventData {
-    pub token: Address,
-    pub user: Address,
-    pub amount: u128,
-}
-
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct ResolveLiquidityDeficitEventData {
