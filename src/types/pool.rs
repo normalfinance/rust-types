@@ -83,64 +83,6 @@ pub struct PoolPlaneType {
     pub reserves: Vec<u128>,
 }
 
-impl Pool {
-    /// Returns true if the pool is in ReduceOnly status
-    pub fn is_reduce_only(&self) -> bool {
-        self.status == PoolStatus::ReduceOnly
-    }
-
-    /// Returns true if the pool is in Settlement or Delisted status
-    pub fn is_in_settlement(&self, _now: u64) -> bool {
-        matches!(self.status, PoolStatus::Settlement | PoolStatus::Delisted)
-    }
-
-    /// Gets the sanitize clamp denominator based on pool tier
-    pub fn get_sanitize_clamp_denominator(&self) -> Option<i64> {
-        match self.tier {
-            PoolTier::A => Some(10_i64),         // 10%
-            PoolTier::B => Some(5_i64),          // 20%
-            PoolTier::C => Some(2_i64),          // 50%
-            PoolTier::Speculative => None,       // DEFAULT_MAX_TWAP_UPDATE_PRICE_BAND_DENOMINATOR
-            PoolTier::HighlySpeculative => None, // DEFAULT_MAX_TWAP_UPDATE_PRICE_BAND_DENOMINATOR
-            PoolTier::Isolated => None,          // DEFAULT_MAX_TWAP_UPDATE_PRICE_BAND_DENOMINATOR
-        }
-    }
-
-    /// Gets the insurance coverage multiplier based on pool tier
-    pub fn get_insurance_coverage_multiplier(&self) -> u64 {
-        match self.tier {
-            PoolTier::A => 10_u64, // 10%
-            PoolTier::B => 5_u64,  // 20%
-            PoolTier::C => 2_u64,  // 50%
-            PoolTier::Speculative => 10_u64,
-            PoolTier::HighlySpeculative => 10_u64,
-            PoolTier::Isolated => 10_u64,
-        }
-    }
-
-    /// Calculates the output amount and fee for a given input amount in a swap
-    /// Returns (output_amount, fee_amount)
-    pub fn get_amount_out(
-        &self,
-        e: &soroban_sdk::Env,
-        in_amount: u128,
-        reserve_sell: u128,
-        reserve_buy: u128,
-    ) -> (u128, u128) {
-        use soroban_fixed_point_math::SorobanFixedPoint;
-        
-        if in_amount == 0 {
-            return (0, 0);
-        }
-
-        const FEE_MULTIPLIER: u128 = 10000;
-        
-        // in * reserve_buy / (reserve_sell + in) - fee
-        let result = in_amount.fixed_mul_floor(e, &reserve_buy, &(reserve_sell + in_amount));
-        let fee = result.fixed_mul_ceil(e, &(self.fee_fraction as u128), &FEE_MULTIPLIER);
-        (result - fee, fee)
-    }
-}
 
 impl PoolTier {
     /// Returns true if this tier is as safe as the other tier (A is safest)
