@@ -30,7 +30,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-normal-rust-types = "0.1.4"
+normal-rust-types = "0.1.5"
 ```
 
 ## Usage
