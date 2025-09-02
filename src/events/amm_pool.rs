@@ -32,7 +32,7 @@ pub struct AmmSwapEventData {
 
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
-pub struct RebalanceEventData {
+pub struct AmmRebalanceEventData {
     pub reserve_a: u128,
     pub reserve_b: u128,
     pub new_reserve_a: u128,
