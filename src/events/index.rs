@@ -1,4 +1,4 @@
-use crate::types::{Component, ComponentAction};
+use crate::types::Component;
 use soroban_sdk::{contracttype, Address, Map};
 
 #[contracttype]

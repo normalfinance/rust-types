@@ -1,4 +1,4 @@
-use soroban_sdk::{contracttype, Address, U256};
+use soroban_sdk::{contracttype, U256};
 
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
